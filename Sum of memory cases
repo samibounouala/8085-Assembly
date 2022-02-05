@@ -1,0 +1,11 @@
+In this program we will calculate the sum of memory cases ranging from 8000h-8010h . The result in 8020h .
+
+MVI A,00H
+MVI B,0AH
+LXI H,8000H
+LOOP: ADD M
+INX H
+DCR B
+JNZ LOOP
+STA 8020
+HLT
